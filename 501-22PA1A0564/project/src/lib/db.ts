@@ -34,7 +34,6 @@ export async function initDB() {
   `);
 }
 
-// Auth functions
 export async function signUp(email: string, password: string, name: string) {
   await initDB();
   const hashedPassword = await bcrypt.hash(password, 10);
@@ -76,7 +75,6 @@ export async function signIn(email: string, password: string) {
   };
 }
 
-// Task functions
 export async function createTask(userId: string, title: string, description: string) {
   await initDB();
   const id = crypto.randomUUID();
