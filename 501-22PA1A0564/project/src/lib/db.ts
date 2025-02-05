@@ -2,8 +2,6 @@ import initSqlJs from 'sql.js';
 import bcrypt from 'bcryptjs';
 
 let db: any = null;
-
-// Initialize the database
 export async function initDB() {
   if (db) return;
 
@@ -12,8 +10,6 @@ export async function initDB() {
   });
   
   db = new SQL.Database();
-
-  // Initialize database tables
   db.run(`
     CREATE TABLE IF NOT EXISTS users (
       id TEXT PRIMARY KEY,
