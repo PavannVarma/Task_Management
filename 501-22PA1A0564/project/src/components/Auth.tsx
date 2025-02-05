@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import { LogIn } from 'lucide-react';
 
 export default function Auth({ onAuth }: { onAuth: (user: any) => void }) {
-  const [loading, setLoading] = useState(false);
+  const [loading,setLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
